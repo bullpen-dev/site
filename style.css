@@ -99,6 +99,7 @@ body {
 }
 
 rss-feed {
+font-size: 2cqw;
 position: absolute;
 width: 24cqw;
 max-width: 100%;
@@ -119,6 +120,9 @@ midi-player {
   position: absolute;
   right: 0;
   bottom: 0;
+  width: 33cqw;
+  height: 6cqw;
+  font-size: 2cqw;
 }
 midi-player::part(control-panel) {
   background: #9c9c9c;
