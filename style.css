@@ -25,6 +25,7 @@ html, body {
 #circlelogo {
   height: 11cqw;
   margin-left: 2cqw;
+  animation: hueRotate 17s linear infinite;
 }
 
 #chatlog {
@@ -86,6 +87,7 @@ body {
   left: 3cqw;
   bottom: 3cqw;
   height: 19cqw;
+  animation: hueRotate 30s linear infinite;
 }
 
 #bullet {
@@ -93,6 +95,7 @@ body {
   padding-right: 1cqw;
   bottom: 0.5cqw;
   position: relative;
+  animation: hueRotate 5s linear infinite;
 }
 
 rss-feed {
@@ -109,4 +112,49 @@ padding-left: 1cqw;
   img {
     max-width: 100%;
   }
+}
+
+midi-player {
+  margin-bottom: 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+midi-player::part(control-panel) {
+  background: #9c9c9c;
+  border: none;
+  border-radius: 0;
+}
+midi-player::part(play-button) {
+  color: #2d2d2d;
+  border: 2px solid currentColor;
+  border-radius: 0;
+  transition: all 0.2s;
+  content: 'hello';
+}
+midi-player::part(play-button):hover {
+  color: #9c9c9c;
+  background-color: #2d2d2d;
+}
+midi-player::part(time) {
+  font-family: 'Times New Roman', serif;
+}
+
+marquee {
+  position: absolute;
+  left: 0;
+  width: 100cqw;
+}
+
+@keyframes hueRotate {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.hue-rotate-animation {
+  animation: hueRotate 20s linear infinite;
 }
