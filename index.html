@@ -9,29 +9,32 @@
 
 	<body>
 		<div id="main">
-			<marquee scrollamount="2">Welcome to the new bullpen.dev landing page! Here you can find our projects, our personal sites, listen to some MIDI, and write us an email. We built this website using Microsoft PowerPoint 2000. We hope you enjoy it!</marquee>
-			<img id="logo" src="bullpenlogo.webp">
+			<marquee scrollamount="2" class="hide-reduce-motion">Welcome to the new bullpen.dev landing page! Here you can find our projects, our personal sites, listen to some MIDI, and write us an email. We built this website using Microsoft PowerPoint 2000. We hope you enjoy it!</marquee>
+			<p class="show-reduce-motion">Welcome to the new bullpen.dev landing page! Here you can find our projects, our personal sites, listen to some MIDI, and write us an email. We built this website using Microsoft PowerPoint 2000. We hope you enjoy it!</p>
+			<img id="logo" src="bullpenlogo.webp" alt="The Bullpen">
 			<h2>"...and they were roommates."</h2>
-			<rss-feed url="https://mastodon.social/@dareelcatskull.rss" count="10"></rss-feed>
 			<img id="chatlog" src="chatlog.webp">
 			<div class="row">
 				<div class="column">
-					<img id="circlelogo" src="projects.webp">
-					<ul>
-						<li><img id="bullet" src="bullet.gif"><a target="_blank" href="https://yazzy.fly.dev/">Yazzy</a></li>
-						<li><img id="bullet" src="bullet.gif"><a target="_blank" href="https://catskull.net/replies.html">Replies</a></li>
-						<li><img id="bullet" src="bullet.gif"><a target="_blank" href="https://samwarnick.com/projects/perfect-cms/">Perfect CMS</a></li>
+					<img id="circlelogo" src="projects.webp" alt="Projects">
+					<ul aria-label="Projects">
+						<li><a target="_blank" href="https://yazzy.fly.dev/">Yazzy</a></li>
+						<li><a target="_blank" href="https://catskull.net/replies.html">Replies</a></li>
+						<li><a target="_blank" href="https://samwarnick.com/projects/perfect-cms/">Perfect CMS</a></li>
 					</ul>
 				</div>
 				<div class="column">
-					<img id="circlelogo" src="us.webp">
-					<ul>
-						<li><img id="bullet" src="bullet.gif"><a target="_blank" href="https://carter.works/">Carter</a></li>
-						<li><img id="bullet" src="bullet.gif"><a target="_blank" href="https://catskull.net/">Dave</a></li>
-						<li><img id="bullet" src="bullet.gif"><a target="_blank" href="https://samwarnick.com/">Sam</a></li>
+					<img id="circlelogo" src="us.webp" alt="Us">
+					<ul aria-label="Us">
+						<li><a target="_blank" href="https://carter.works/">Carter</a></li>
+						<li><a target="_blank" href="https://catskull.net/">Dave</a></li>
+						<li><a target="_blank" href="https://samwarnick.com/">Sam</a></li>
 					</ul>
 				</div>
 			</div>
+			<section aria-label="Mastodon Feed">
+			  <rss-feed url="https://mastodon.social/@dareelcatskull.rss" count="10"></rss-feed>
+			</section>
 			<midi-player
 				id="midi-player"
 			  src="passport.mid"
@@ -39,7 +42,7 @@
 			  loop>
 			</midi-player>
 			<a target="_blank" href="mailto:hello@bullpen.dev?subject=Re:%20Contact%20Us">
-				<img id="contact-us" src="contact_us.webp">
+				<img id="contact-us" src="contact_us.webp" alt="Contact Us">
 			</a>
 		</div>
 	</body>
